@@ -17,7 +17,7 @@ module Rails
         rescue NoMethodError
           ''
         end
-        result.html_safe
+        ERB::Util.html_escape result
       end
     end
   end
